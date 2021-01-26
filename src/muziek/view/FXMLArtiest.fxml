@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="muziek.FXMLArtiestController">
+   <children>
+      <SplitPane dividerPositions="0.33" layoutX="223.0" layoutY="82.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ListView fx:id="artiestList" layoutX="18.0" layoutY="114.0" onMouseClicked="#artiestSelectie" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+                  <Label layoutX="32.0" layoutY="14.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" prefWidth="236.0" text="Kies een artiest om er meer informatie over te zien." wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <HBox alignment="BOTTOM_RIGHT" layoutX="-8.0" layoutY="284.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="27.0" prefWidth="356.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#openAfspelen" text="Album of playlist afspelen" />
+                        <Button alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#openUser" text="Nieuwe user playlist maken" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="23.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="19.0" prefWidth="356.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label text="Geselecteerde artiest:   " />
+                        <Label fx:id="artiestLabel" prefHeight="18.0" prefWidth="229.0" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="artiestInfo" alignment="TOP_LEFT" layoutX="14.0" layoutY="48.0" wrapText="true" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

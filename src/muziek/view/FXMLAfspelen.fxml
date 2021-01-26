@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="muziek.FXMLAfspelenController">
+   <children>
+      <SplitPane dividerPositions="0.4" layoutX="165.0" layoutY="56.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Accordion fx:id="afspelenAccordion" layoutX="37.0" layoutY="27.0" prefHeight="398.4" prefWidth="296.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="47.0">
+                    <panes>
+                        <TitledPane animated="false" text="Genre">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ListView fx:id="afspelenGenreList" layoutY="14.0" onMouseClicked="#genreClick" prefHeight="269.6" prefWidth="234.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                      <TitledPane fx:id="artiestenAccordion" animated="false" text="Artiesten">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ListView fx:id="afspelenArtiestenList" layoutX="14.0" layoutY="34.0" onMouseClicked="#artistClick" prefHeight="320.8" prefWidth="294.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                      <TitledPane fx:id="albumsAccordion" animated="false" text="Albums">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ListView fx:id="afspelenAlbumsList" layoutX="47.0" layoutY="14.0" onMouseClicked="#albumClick" prefHeight="320.8" prefWidth="294.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                      <TitledPane fx:id="nummersAccordion" animated="false" text="Nummers">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ListView fx:id="afspelenNummersList" layoutX="14.0" layoutY="14.0" onMouseClicked="#nummerClick" prefHeight="320.8" prefWidth="294.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                        <TitledPane fx:id="userAccordion" animated="false" text="User Playlists">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ListView fx:id="afspelenUserList" layoutX="-11.0" layoutY="14.0" onMouseClicked="#userClick" prefHeight="295.2" prefWidth="234.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                    </panes>
+                  </Accordion>
+                  <Label layoutX="44.0" layoutY="6.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="47.0" prefWidth="436.0" text="Filter op genre en artiest en klik op album, nummer of playlist om het af te spelen." wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <SplitPane layoutX="78.0" layoutY="61.0" prefHeight="398.4" prefWidth="356.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <HBox layoutX="50.0" layoutY="-9.0" prefHeight="19.0" prefWidth="654.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label prefHeight="18.0" prefWidth="112.0" text="Huidige playlist:" />
+                                    <Label fx:id="afspelenHuidigeLabel" alignment="TOP_LEFT" prefHeight="18.0" prefWidth="419.0" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="-13.0" layoutY="242.0" maxHeight="-Infinity" prefHeight="26.0" prefWidth="489.0" AnchorPane.bottomAnchor="78.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                 <children>
+                                    <Label prefHeight="26.0" prefWidth="252.0" text="Afspeelduur huidige playlist:" />
+                                    <Label fx:id="afspelenDuratieLabel" prefHeight="52.0" prefWidth="174.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutY="276.0" maxHeight="-Infinity" prefHeight="41.0" prefWidth="280.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                 <children>
+                                    <Button fx:id="afspelenShuffleButton" mnemonicParsing="false" onAction="#shuffle" text="Shuffle playlist" />
+                                    <Button fx:id="afspelenVorigeButton" mnemonicParsing="false" onAction="#vorige" text="Vorige nummer" />
+                                    <Button fx:id="afspelenVolgendeButton" mnemonicParsing="false" onAction="#volgende" text="Volgende nummer" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="41.0" prefWidth="356.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                 <children>
+                                    <Button fx:id="afspelenMenuButton" mnemonicParsing="false" onAction="#afspelenOpenMenu" text="Terug naar menu" />
+                                    <Button fx:id="afspelenUserButton" mnemonicParsing="false" onAction="#afspelenOpenUser" text="User Playlist maken" />
+                                 </children>
+                              </HBox>
+                              <ListView fx:id="afspelenHuidigeList" layoutY="46.0" prefHeight="355.0" prefWidth="489.0" AnchorPane.bottomAnchor="143.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="47.0" />
+                              <HBox layoutX="20.0" layoutY="340.0" maxHeight="1.7976931348623157E308" prefHeight="35.0" prefWidth="489.0" AnchorPane.bottomAnchor="109.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                 <children>
+                                    <Label prefHeight="35.0" prefWidth="252.0" text="Nummer dat wordt afgespeeld: " />
+                                    <Label fx:id="afspelenNummerLabel" prefHeight="45.0" prefWidth="309.0" />
+                                 </children>
+                              </HBox>
+                              <Label fx:id="jaartalLabel" layoutX="8.0" layoutY="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,9 @@
+<#if licenseFirst??>
+${licenseFirst}
+</#if>
+${licensePrefix}Caren Groenhuijzen
+${licensePrefix}NOVI Hogeschool - Eindopdracht OOP
+${licensePrefix}30-03-2020
+<#if licenseLast??>
+${licenseLast}
+</#if>
